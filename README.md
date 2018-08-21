@@ -2,6 +2,8 @@
 
 Python code for Dynamic Time Warping
 
+![Dynamic Time Warping](SINEdistance.png "Dynamic Time Warping"
+
 This is a python translation of [Dylan Mikesell's DynamicWarping repo](https://github.com/dylanmikesell/DynamicWarping) in MATLAB. 
 
 You can run the run_example.m with two example shifts.
