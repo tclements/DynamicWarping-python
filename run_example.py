@@ -1,8 +1,15 @@
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as plt 
+import matplotlib
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import dtw 
+
+font = {'family' : 'normal',
+        'weight' : 'bold',
+        'size'   : 22}
+
+matplotlib.rc('font', **font)
 
 # parameters
 maxLag = 80
@@ -30,8 +37,8 @@ ax[0].set_title('Distance function')
 ax[0].set_xlabel('Time [s]')
 ax[0].set_ylabel(r'$\tau$ [s]')
 ax[0].invert_yaxis()  
-cax = fig.add_axes([0.93, 0.55, 0.03, 0.3])
-fig.colorbar(dist_mat,cax=cax)
+cax = fig.add_axes([0.65, 0.5, 0.3, 0.02])
+fig.colorbar(dist_mat,cax=cax,orientation='horizontal')
 # plot real shifts against estimated shifts
 ax[1].plot(tvec,stTime,'ko',label='Actual')
 ax[1].plot(tvec,stbarTime,'r+',label='Estimated') 
@@ -41,5 +48,6 @@ ax[1].set_xlabel('Time [s]')
 ax[1].set_ylabel(r'$\tau$ [s]')
 ax[1].set_xlim([tvec[0],tvec[-1]])
 plt.autoscale(enable=True, tight=True)
+fig.tight_layout()
 plt.savefig('SINEdistance.png')
 plt.show()
