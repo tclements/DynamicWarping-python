@@ -16,4 +16,4 @@ In (2) we see that we recover the fits well with b=1. If we go to larger b
 values we see that we no longer recover the shifts, because we do not allow
 large enough steps.
 
-Cite the paper: [Mikesell et al., 2015, A comparison of methods to estimate seismic phase delays: numerical examples for coda wave interferometry, Geophysical Journal International] (https://academic.oup.com/gji/article/202/1/347/587747)
+Cite the paper: [Mikesell et al., 2015, A comparison of methods to estimate seismic phase delays: numerical examples for coda wave interferometry, Geophysical Journal International](https://academic.oup.com/gji/article/202/1/347/587747)
