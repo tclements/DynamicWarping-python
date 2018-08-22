@@ -3,7 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import matplotlib
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-import dtw 
+
+try: # use fast cython version 
+        import _dtw as dtw
+except ImportError:
+        import dtw 
 
 font = {'family' : 'normal',
         'weight' : 'bold',
